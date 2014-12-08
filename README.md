@@ -1,7 +1,7 @@
 Impressionist
 =====
 
-write a markdown file and generate a [impressjs](https://github.com/bartaz/impress.js/) presentation
+write a markdown file and generate an [impressjs](https://github.com/bartaz/impress.js/) presentation
 
 ## usage
 
