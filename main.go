@@ -25,6 +25,11 @@ func main() {
 	flag.StringVar(&outdir, "outdir", ".", "output directory, default to pwd, will attempt creation if specified")
 	flag.BoolVar(&nobasestyle, "nobasestyle", false, "specify to NOT include the impressjs demo css")
 	flag.Parse()
+	if len(flag.Args()) < 1 {
+		l.info(`usage: impressionist -outdir presentationfolder input.md`)
+		os.Exit(0)
+	}
+
 	if len(flag.Args()) > 1 {
 		l.error("multiple input files specified but not supported %v", flag.Args())
 		os.Exit(1)
