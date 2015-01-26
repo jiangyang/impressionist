@@ -13,7 +13,7 @@ then
 The input markdown file will be rendered into `index.html` and then put into the output dir. A version of impressjs will be download and put in the output dir so your presentation can be run.
 
 options:
->  -nobasestyle=false: specify to NOT include the impressjs demo css  
+>  -democss=false: specify to include the impressjs demo css  
 >  -outdir=".": output directory, default to pwd, will attempt creation if specified  
 
 ## example markdown

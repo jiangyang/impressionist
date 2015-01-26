@@ -21,9 +21,9 @@ var defaultJsLiteral = []string{
 func main() {
 	var err error = nil
 	var outdir, infile string
-	var nobasestyle bool
+	var democss bool
 	flag.StringVar(&outdir, "outdir", ".", "output directory, default to pwd, will attempt creation if specified")
-	flag.BoolVar(&nobasestyle, "nobasestyle", false, "specify to NOT include the impressjs demo css")
+	flag.BoolVar(&democss, "democss", false, "specify to NOT include the impressjs demo css")
 	flag.Parse()
 	if len(flag.Args()) < 1 {
 		l.info(`usage: impressionist -outdir presentationfolder input.md`)
@@ -35,7 +35,7 @@ func main() {
 		os.Exit(1)
 	}
 	infile = flag.Args()[0]
-	if !nobasestyle {
+	if democss {
 		defaultCss = append(defaultCss, impressjsName+"/css/impress-demo.css")
 	}
 
